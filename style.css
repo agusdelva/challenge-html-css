@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 750px;
+  height: 370px;
+  border: 1px solid red;
+}
+
+.foto__sillon {
+  width: 350px;
+  height: 215px;
+  /* align-items: center; */
+}
+
+.sillon {
+  align-self: center;
+  justify-self: center;
+}
+
+.flechas {
+  height: 45px;
+  width: 90px;
+  grid-column: 1;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+.title {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  align-self: flex-start;
+  justify-self: left;
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+.parrafo {
+  grid-column-start: 2;
+  grid-row-start: 1;
+  align-self: center;
+  /* margin-top: -20px; */
+  font-size: 16px;
+  justify-self: left;
+}
+
+.circles {
+  height: 70px;
+  width: 250px;
+  border: 1px solid yellow;
+  align-self: flex-start;
+}

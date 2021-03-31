@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background: #ffffff 0% 0% no-repeat padding-box;
 }
 .content {
   display: flex;
@@ -18,18 +19,25 @@
 .content__box {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 750px;
+  grid-template-rows: 280px 70px;
+  width: 770px;
   height: 370px;
-  border: 1px solid red;
+  opacity: 100%;
+  border-radius: 8px;
+  box-shadow: -1px 3px 13px 0px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: -1px 3px 13px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: -1px 3px 13px 0px rgba(0, 0, 0, 0.38);
+  overflow: hidden;
 }
 
 .foto__sillon {
-  width: 350px;
-  height: 215px;
-  /* align-items: center; */
+  margin-top: 30px;
+  width: 450px;
+  height: 285px;
 }
 
 .sillon {
+  overflow: hidden;
   align-self: center;
   justify-self: center;
 }
@@ -42,27 +50,173 @@
   justify-self: center;
 }
 
-.title {
+.flecha-img {
+  transform: rotateY(180deg);
+}
+
+.caja__title {
+  font-family: "Montserrat", sans-serif;
   grid-column-start: 2;
   grid-row-start: 1;
   align-self: flex-start;
   justify-self: left;
-  font-size: 36px;
   margin-top: 30px;
+  color: #666666;
 }
 
-.parrafo {
+.caja__parrafo {
+  width: 310px;
+  height: 110px;
   grid-column-start: 2;
   grid-row-start: 1;
   align-self: center;
-  /* margin-top: -20px; */
+  margin-top: 10px;
   font-size: 16px;
   justify-self: left;
+  font-family: "Noto Sans", sans-serif;
+  color: #666666;
 }
 
 .circles {
-  height: 70px;
-  width: 250px;
-  border: 1px solid yellow;
-  align-self: flex-start;
+  height: 50px;
+  width: 120px;
+  /* border: 1px solid red; */
+  align-self: flex-end;
+  display: flex;
+  justify-content: space-between;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  margin-top: 40px;
+}
+
+[class^="elipse-"] {
+  margin: auto;
+}
+
+.precio-boton {
+  align-self: center;
+  display: flex;
+}
+
+.precio {
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 30px;
+}
+
+.boton {
+  width: 132px;
+  height: 42px;
+  margin-left: 74px;
+  background-color: #88c9f6;
+  border-radius: 6px;
+  color: #ffffff;
+  letter-spacing: 0;
+  text-align: center;
+  outline: none;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 768px) {
+  .content__box {
+    grid-template-rows: 255px 65px;
+    width: 650px;
+    height: 320px;
+  }
+  .foto__sillon {
+    margin-top: 20px;
+    width: 350px;
+    height: 255px;
+  }
+  .precio {
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content {
+    display: grid;
+  }
+  .content__box {
+    grid-template-columns: 330px;
+    grid-template-rows: 200px 50px 50px 50px 140px 80px;
+    width: 330px;
+    height: 600px;
+    margin: 0;
+  }
+  .foto__sillon {
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+  }
+  .caja__title {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    align-self: center;
+    justify-self: center;
+  }
+  .caja__parrafo {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    font-size: 16px;
+    justify-self: center;
+  }
+  .circles {
+    height: 50px;
+    width: 120px;
+    justify-self: center;
+    display: flex;
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  .precio-boton {
+    justify-content: space-evenly;
+  }
+  .boton {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content {
+    display: grid;
+  }
+  .content__box {
+    grid-template-columns: 330px;
+    grid-template-rows: 200px 50px 50px 50px 140px 80px;
+    width: 330px;
+    height: 600px;
+    margin: 0;
+  }
+  .foto__sillon {
+    margin-top: 20px;
+    width: 300px;
+    height: 200px;
+  }
+  .caja__title {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    align-self: center;
+    justify-self: center;
+  }
+  .caja__parrafo {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    font-size: 16px;
+    justify-self: center;
+  }
+  .circles {
+    height: 50px;
+    width: 120px;
+    justify-self: center;
+    display: flex;
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+  .precio-boton {
+    justify-content: space-evenly;
+  }
+  .boton {
+    margin-left: 0;
+  }
 }

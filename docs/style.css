@@ -224,6 +224,7 @@
     grid-column-start: 1;
     grid-row-start: 3;
   }
+
   .content__rectangulo {
     justify-content: space-evenly;
   }

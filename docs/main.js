@@ -5,13 +5,13 @@ const img = document.getElementById('img');
 const parrafo = document.getElementById('parrafo');
 const precio = document.getElementById('precio');
 
+let ids = []
+
 const datos = [
     {titulo: 'Sillon Celeste',parrafo:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', imagen:'./assets/image-25.png',precio:'$1,564'},
     {titulo: 'Sillon Gris',parrafo:'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, nemo', imagen:'./assets/sillon-gris.png',precio:'$1,589'},
     {titulo: 'Sillon Marron',parrafo:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non esse odio vero qui hic obcaecati', imagen:'./assets/sillon-oscuro.jpg',precio:'$1,594'},
-    {titulo: 'Silla Gris',parrafo:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam non in aliquam, nisi quibusdam magni quia nam repudiandae atque eveniet', imagen:'./assets/imagen-silla-gris.jpg',precio:'$1,364'},
-
-
+    {titulo: 'Silla Rosa',parrafo:'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam non in aliquam, nisi quibusdam magni quia nam repudiandae atque eveniet', imagen:'./assets/sillon-rosa.jpg',precio:'$1,364'},
 ]
 
 document.addEventListener("DOMContentLoaded", function(e){
@@ -57,6 +57,40 @@ const slider = (e) => {
 
 atras.addEventListener('click', slider )
 adelante.addEventListener('click', slider)
+
+const contenedor = document.getElementById('content__circles');
+
+// console.log(contenedor);
+const changeDatos = (contenedor) => {
+    contenedor.addEventListener("change", e => {
+        const circle = e.target.id
+        switch(circle) {
+        case 'circle-1':
+            img.setAttribute('src',datos[0].imagen)
+            break;
+
+        case 'circle-2':
+            img.setAttribute('src',datos[1].imagen)
+            break;
+
+        case 'circle-3':
+            img.setAttribute('src',datos[2].imagen)
+            break;
+
+        case 'circle-4':
+            img.setAttribute('src',datos[3].imagen)
+            break;
+
+        default:
+            img.setAttribute('src', datos[0].imagen)
+            break;
+        }
+    })
+}
+
+document.addEventListener('click', (e) => {
+    changeDatos(contenedor)
+})
 
 // const carrousel = (contenedor) => {
 //     contenedor.addEventListener('click', e => {

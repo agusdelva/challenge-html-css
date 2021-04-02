@@ -16,20 +16,24 @@
     <main class="main">
         <div class="content">
             <div class="content__sillon">
-                <img id="img-main" alt="foto de un sillon" class="content__sillon--img" src="./assets/image-25.png">
+                <img id="img" src="./assets/image-25.png" alt="foto de un sillon" class="content__sillon--img" >
             </div>
             <div class="content__flechas">
                 <img id="img-atras" alt="imagen de una flecha" class="content__flechas--img1" src="./assets/group-81.svg">
                 <img id="img-adelante" alt="imagen de una flecha" class="content__flechas--img2" src="./assets/group-81.svg">
             </div>
-            <div class="content__titulo">
-                <h1>Nuvo Armchair</h1>
+            <div  class="content__titulo">
+                <h1 id="title">Nuvo Armchair</h1>
             </div>
             <div class="content__parrafo">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p  id="parrafo">Loremee ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="content__circles">
-                <div class="content__circles--elipse1">
+                <input id="circle-1" name="circles" value="ffffff" type="radio" checked>
+                <input id="circle-2" name="circles" value="ff0000" type="radio">
+                <input id="circle-3" name="circles" value="00ff00" type="radio">
+
+                <!-- <div class="content__circles--elipse1">
                     <img alt="ciculo de color gris" src="./assets/ellipse-6.svg">
                 </div>
                 <div class="content__circles--elipse2">
@@ -40,10 +44,10 @@
                 </div>
                 <div class="content__circles--elipse4">
                     <img alt="circulo de color rosa" src="./assets/ellipse-6-3.svg">
-                </div>
+                </div> -->
             </div>
             <div class="content__rectangulo">
-                <span class="content__rectangulo--precio">$1,599</span>
+                <span id="precio" class="content__rectangulo--precio">$1,599</span>
                 <button class="content__rectangulo--boton">Add to cart</button>
             </div>
         </div>

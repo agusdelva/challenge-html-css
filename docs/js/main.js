@@ -5,7 +5,6 @@ const img = document.getElementById('img');
 const parrafo = document.getElementById('parrafo');
 const precio = document.getElementById('precio');
 const contenedor = document.getElementById('content__circles');
-let ids = []
 
 const datos = [
     {titulo: 'Sillon Celeste',parrafo:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', imagen:'./assets/image-25.png',precio:'$1,564'},
@@ -117,40 +116,6 @@ document.addEventListener('click', (e) => {
     changeDatos(contenedor)
 })
 
-// const carrousel = (contenedor) => {
-//     contenedor.addEventListener('click', e => {
-//         let atras = contenedor.querySelector('#img-atras');
-//         let adelante = contenedor.querySelector('#img-adelante');
-//         let img = document.getElementById('img-main');
-//         let tgt = e.target;
 
-
-//             if(tgt == atras){
-//                 if(cont > 0){
-//                     img.src = imagenes[cont -1];
-//                     cont--;
-//                 } else {
-//                     img.src = imagenes[imagenes.length - 1];
-//                     cont = imagenes.length -1;
-//                 }
-//             } else if (tgt == adelante){
-//                 if(cont < imagenes.length - 1) {
-//                     img.src = imagenes[cont + 1];
-//                     cont ++;
-//                 } else {
-//                     img.src = imagenes[0];
-//                     cont = 0;
-//                 }
-//             }
-//     })
-// }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     let contenedor = document.querySelector('.content__flechas')
-
-//     carrousel(contenedor);
-// })
-
-//pruebas inputs
 
 

@@ -4,7 +4,7 @@ const adelante = document.getElementById('img-adelante');
 const img = document.getElementById('img');
 const parrafo = document.getElementById('parrafo');
 const precio = document.getElementById('precio');
-
+const contenedor = document.getElementById('content__circles');
 let ids = []
 
 const datos = [
@@ -24,14 +24,18 @@ document.addEventListener("DOMContentLoaded", function(e){
 let i = 0;
 
 const slider = (e) => {
+
+    const [...inputs] = contenedor.children
     if(e.target == atras){
         if(i>0){
+            inputs[i - 1].checked = true;
             title.textContent = datos[i - 1].titulo;
             img.setAttribute('src', datos[i - 1].imagen);
             parrafo.textContent = datos[i - 1].parrafo;
             precio.textContent = datos[i - 1].precio;
             i--;
         }else{
+            inputs[datos.length-1].checked = true;
             title.textContent = datos[datos.length-1].titulo;
             img.setAttribute('src', datos[datos.length-1].imagen);
             parrafo.textContent = datos[datos.length-1].parrafo;
@@ -40,12 +44,14 @@ const slider = (e) => {
         }
     } else if( e.target == adelante) {
         if(i<datos.length-1){
+            inputs[i + 1].checked = true;
             title.textContent = datos[i + 1].titulo;
             img.setAttribute('src', datos[i + 1].imagen);
             parrafo.textContent = datos[i + 1].parrafo;
             precio.textContent = datos[i + 1].precio;
             i++;
         } else {
+            inputs[0].checked = true;
             title.textContent = datos[0].titulo;
             img.setAttribute('src', datos[0].imagen);
             parrafo.textContent = datos[0].parrafo;
@@ -58,7 +64,6 @@ const slider = (e) => {
 atras.addEventListener('click', slider )
 adelante.addEventListener('click', slider)
 
-const contenedor = document.getElementById('content__circles');
 
 // console.log(contenedor);
 const changeDatos = (contenedor) => {
@@ -67,22 +72,42 @@ const changeDatos = (contenedor) => {
         switch(circle) {
         case 'circle-1':
             img.setAttribute('src',datos[0].imagen)
+            title.textContent = datos[0].titulo;
+            parrafo.textContent = datos[0].parrafo;
+            precio.textContent = datos[0].precio;
+            i = 0;
             break;
 
         case 'circle-2':
             img.setAttribute('src',datos[1].imagen)
+            title.textContent = datos[1].titulo;
+            parrafo.textContent = datos[1].parrafo;
+            precio.textContent = datos[1].precio;
+            i = 1;
             break;
 
         case 'circle-3':
             img.setAttribute('src',datos[2].imagen)
+            title.textContent = datos[2].titulo;
+            parrafo.textContent = datos[2].parrafo;
+            precio.textContent = datos[2].precio;
+            i = 2;
             break;
 
         case 'circle-4':
             img.setAttribute('src',datos[3].imagen)
+            title.textContent = datos[3].titulo;
+            parrafo.textContent = datos[3].parrafo;
+            precio.textContent = datos[3].precio;
+            i = 3;
             break;
 
         default:
             img.setAttribute('src', datos[0].imagen)
+            title.textContent = datos[0].titulo;
+            parrafo.textContent = datos[0].parrafo;
+            precio.textContent = datos[0].precio;
+            i = 0;
             break;
         }
     })

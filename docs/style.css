@@ -86,7 +86,6 @@
 .content__circles {
   height: 50px;
   width: 120px;
-  /* border: 1px solid red; */
   align-self: flex-end;
   display: flex;
   justify-content: space-between;
@@ -95,10 +94,74 @@
   margin-top: 40px;
 }
 
-[class^="content__circles--elipse"] {
+input {
+  width: 20px;
+  height: 20px;
+}
+
+#circle-1::before,
+#circle-2::before,
+#circle-3::before,
+#circle-4::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+#circle-1::before {
+  background-color: #5a90bc;
+}
+
+#circle-2::before {
+  background-color: #cccccc;
+}
+
+#circle-3::before {
+  background-color: #666666;
+}
+
+#circle-4::before {
+  background-color: #ffedda;
+}
+
+#circle-1:checked#circle-1::before {
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+}
+
+#circle-2:checked#circle-2::before {
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+}
+
+#circle-3:checked#circle-3::before {
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+}
+
+#circle-4:checked#circle-4::before {
+  box-sizing: border-box;
+  border: 2px solid white;
+  box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
+}
+
+/* #circle-1::before [class^="content__circles--elipse"] {
   margin: auto;
   cursor: pointer;
-}
+} */
 
 .content__rectangulo {
   align-self: center;
@@ -224,6 +287,7 @@
     display: flex;
     grid-column-start: 1;
     grid-row-start: 3;
+    margin-top: 0;
   }
 
   .content__rectangulo {

@@ -158,11 +158,6 @@ input {
   -moz-box-shadow: -1px -13px 15px -9px rgba(0, 0, 0, 0.7);
 }
 
-/* #circle-1::before [class^="content__circles--elipse"] {
-  margin: auto;
-  cursor: pointer;
-} */
-
 .content__rectangulo {
   align-self: center;
   display: flex;
